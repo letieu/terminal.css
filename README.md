@@ -13,11 +13,11 @@ Add these links to your HTML file:
 
 ```html
 <!-- In your <head> section -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.1/index.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.2/index.css" />
 
 <!-- Before closing </body> tag -->
 <!-- [Optional: Only for toast, FAQ component] -->
-<script src="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.1/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.2/index.js"></script>
 ```
 
 Optional: Add Tailwind CSS for layout utilities (flex, grid, spacing)
@@ -47,7 +47,7 @@ To use any component, simply:
     <title>My Terminal App</title>
 
     <!-- terminal.css Stylesheet -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.1/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.2/index.css">
 
     <!-- Optional: Tailwind for layout utilities -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +57,7 @@ To use any component, simply:
     <button class="button is-primary">Click Me</button>
 
     <!-- terminal.css JavaScript -->
-    <script src="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.1/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.2/index.js"></script>
 </body>
 </html>
 ```
