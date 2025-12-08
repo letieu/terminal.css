@@ -1,6 +1,7 @@
 # terminal.css
 
-<img width="3838" height="2150" alt="image" src="https://github.com/user-attachments/assets/5aa57dd4-452e-4880-9c41-472d05b43795" />
+<img width="3782" height="2296" alt="image" src="https://github.com/user-attachments/assets/b86f62ed-0fff-428a-8285-fec57b6f3332" />
+
 
 
 A modern CSS framework for terminal-style websites.
