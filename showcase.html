@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>terminal.css - Component Showcase</title>
+
+    <!-- terminal.css Components (Bulma-style) -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Tailwind for layout (optional) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- terminal.css JavaScript -->
+    <script src="./index.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .showcase-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+      .showcase-section {
+        background: var(--terminal-bg);
+        border: 1px solid var(--terminal-border);
+        padding: 0.5rem;
+        border-radius: 4px;
+      }
+      .showcase-header {
+        background: var(--terminal-bg);
+        border-bottom: 2px solid var(--terminal-primary);
+        padding: 2rem;
+        text-align: center;
+      }
+      @media (max-width: 1400px) {
+        .showcase-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 900px) {
+        .showcase-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="showcase-header">
+      <h1 class="title is-1 has-terminal-glow mb-4">
+        terminal.css Component Library
+      </h1>
+      <p class="subtitle is-4 mb-6">
+        Terminal-style components with Bulma naming conventions
+      </p>
+      <div class="flex gap-3 justify-center">
+        <a href="./index.html" class="button is-primary">Get Started</a>
+      </div>
+    </div>
+
+    <!-- SHOWCASE GRID -->
+    <div class="showcase-grid">
+      <!-- BUTTONS -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Buttons</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="button is-primary">Primary</button>
+          <button class="button is-danger">Danger</button>
+          <button class="button is-success">Success</button>
+          <button class="button is-warning">Warning</button>
+          <button class="button is-outlined">Outlined</button>
+          <button class="button is-ghost">Ghost</button>
+        </div>
+      </div>
+
+      <!-- TAGS -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Tags & Badges</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag is-primary">v3.0.0</span>
+          <span class="tag is-success">Active</span>
+          <span class="tag is-danger">Error</span>
+          <span class="tag is-warning">Beta</span>
+          <span class="tag is-info">New</span>
+        </div>
+      </div>
+
+      <!-- FORMS -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Forms</h3>
+        <div class="space-y-3">
+          <div class="control">
+            <span class="has-text-primary" style="padding: 0 8px">$</span>
+            <input type="text" class="input" placeholder="Enter username..." />
+          </div>
+          <div class="control">
+            <span class="has-text-success" style="padding: 0 8px">✓</span>
+            <input
+              type="email"
+              class="input"
+              placeholder="email@example.com"
+              value="valid@email.com"
+            />
+          </div>
+          <div class="control">
+            <select class="select">
+              <option>Select option...</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- TYPOGRAPHY -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Typography</h3>
+        <h1 class="title is-3 mb-2">Terminal UI</h1>
+        <p class="subtitle is-6 mb-3">
+          Beautiful command-line inspired components
+        </p>
+        <p class="has-text-muted">Monospace fonts and retro aesthetics</p>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Progress</h3>
+        <div class="space-y-3">
+          <progress class="progress is-primary" value="75" max="100">
+            75%
+          </progress>
+          <progress class="progress is-success" value="100" max="100">
+            100%
+          </progress>
+          <progress class="progress is-danger" value="30" max="100">
+            30%
+          </progress>
+        </div>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Tabs</h3>
+        <div class="tabs">
+          <ul>
+            <li class="is-active"><a>Dashboard</a></li>
+            <li><a>Settings</a></li>
+            <li><a>Logs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TERMINAL LOG -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Terminal Log</h3>
+        <div class="terminal-log">
+          <div class="log-line has-text-success">✓ Build successful</div>
+          <div class="log-line has-text-info">→ Starting server...</div>
+          <div class="log-line has-text-warning">
+            ⚠ Warning: deprecated API
+          </div>
+          <div class="log-line has-text-danger">✗ Connection failed</div>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Card</h3>
+        <div class="card">
+          <div class="card-header">
+            <p class="card-header-title">System Status</p>
+          </div>
+          <div class="card-content">
+            <p class="has-text-success mb-2">● CPU: 45%</p>
+            <p class="has-text-warning mb-2">● Memory: 78%</p>
+            <p class="has-text-info">● Disk: 62%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Table</h3>
+        <table class="table is-bordered is-striped">
+          <thead>
+            <tr>
+              <th>Process</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>nginx</td>
+              <td><span class="tag is-success">Running</span></td>
+            </tr>
+            <tr>
+              <td>mysql</td>
+              <td><span class="tag is-warning">Starting</span></td>
+            </tr>
+            <tr>
+              <td>redis</td>
+              <td><span class="tag is-danger">Stopped</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- BREADCRUMB -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Breadcrumb</h3>
+        <ul class="breadcrumb">
+          <li><a>Home</a></li>
+          <li><a>Projects</a></li>
+          <li class="is-active"><a>terminal.css</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Menu</h3>
+        <aside class="menu">
+          <p class="menu-label">Navigation</p>
+          <ul class="menu-list">
+            <li><a class="is-active">Dashboard</a></li>
+            <li><a>Components</a></li>
+            <li><a>Settings</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- LIST -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Lists</h3>
+        <ul class="list">
+          <li class="list-item">
+            <span class="list-item-icon">▸</span>
+            <span class="list-item-content">Initialize system</span>
+          </li>
+          <li class="list-item is-active">
+            <span class="list-item-icon">▸</span>
+            <span class="list-item-content">Load configuration</span>
+          </li>
+          <li class="list-item">
+            <span class="list-item-icon">▸</span>
+            <span class="list-item-content">Start services</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NOTIFICATIONS / TOAST -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Notifications</h3>
+        <div class="space-y-2">
+          <div class="toast is-success">
+            <strong>Success!</strong> Your changes were saved.
+          </div>
+          <div class="toast is-danger">
+            <strong>Error!</strong> Something went wrong.
+          </div>
+          <div class="toast is-info">
+            <strong>Info:</strong> New update available.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ / ACCORDION -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">FAQ</h3>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What is terminal.css?
+          </div>
+          <div class="faq-answer">A terminal-style CSS component library</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How to install?
+          </div>
+          <div class="faq-answer">Use CDN or download the CSS/JS files</div>
+        </div>
+      </div>
+
+      <!-- DROPDOWN -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Dropdown</h3>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button">
+              <span>Options</span>
+              <span>▼</span>
+            </button>
+          </div>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <a class="dropdown-item">Settings</a>
+              <a class="dropdown-item">Profile</a>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KBD ELEMENT -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Keyboard</h3>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy</p>
+        <p class="mt-2">Use <kbd>Esc</kbd> to exit</p>
+      </div>
+
+      <!-- TEXT COLORS -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Text Colors</h3>
+        <div class="space-y-2">
+          <p class="has-text-primary">Primary text</p>
+          <p class="has-text-success">Success message</p>
+          <p class="has-text-danger">Error message</p>
+          <p class="has-text-warning">Warning text</p>
+          <p class="has-text-info">Info text</p>
+          <p class="has-text-muted">Muted text</p>
+        </div>
+      </div>
+
+      <!-- UTILITIES -->
+      <div class="showcase-section">
+        <h3 class="title is-5 mb-4 has-text-primary">Effects</h3>
+        <div class="space-y-3">
+          <p class="has-terminal-glow">Terminal glow effect</p>
+          <p class="has-terminal-cursor">Blinking cursor</p>
+          <hr />
+          <p class="has-text-muted text-sm">Divider separator</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>terminal.css - Terminal CSS Component Library</title>
+
+    <!-- terminal.css Components (Bulma-style) -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Tailwind for layout (optional) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- terminal.css JavaScript -->
+    <script src="./index.js"></script>
+  </head>
+  <body class="min-h-screen p-8">
+    <!-- MAIN TERMINAL WINDOW -->
+    <div class="terminal max-w-6xl mx-auto mb-20">
+      <!-- HEADER -->
+      <div class="terminal-header">
+        <div class="flex gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="has-text-muted text-sm font-bold">dev@localhost:~/</div>
+        <div class="has-text-muted text-xs" style="opacity: 0.5">
+          v0.0.1
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="terminal-body">
+        <!-- INTRO -->
+        <div class="mb-8">
+          <h1 class="title is-1 has-terminal-glow">Terminal.css</h1>
+          <p class="subtitle is-4">
+            Terminal-style css components with Bulma naming conventions
+          </p>
+          <div class="mt-4">
+            <a href="./installation.html" class="button is-primary"
+              >Installation Guide</a
+            >
+            <a class="button is-info" href="./showcase.html">Showcase</a>
+            <a class="button is-ghost" href="">GitHub</a>
+          </div>
+          <hr class="mt-6" />
+        </div>
+
+        <!-- SECTION 1: TYPOGRAPHY -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">01.</span>
+            <h2 class="text-xl font-bold">Typography</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Titles -->
+            <div class="space-y-4">
+              <h4 class="has-text-muted text-sm mb-3">Titles</h4>
+              <h1 class="title is-1">Title 1</h1>
+              <h2 class="title is-2">Title 2</h2>
+              <h3 class="title is-3">Title 3</h3>
+              <h4 class="title is-4">Title 4</h4>
+              <h5 class="title is-5">Title 5</h5>
+              <h6 class="title is-6">Title 6</h6>
+            </div>
+
+            <!-- Subtitles -->
+            <div class="space-y-4">
+              <h4 class="has-text-muted text-sm mb-3">Subtitles</h4>
+              <p class="subtitle is-1">Subtitle 1</p>
+              <p class="subtitle is-2">Subtitle 2</p>
+              <p class="subtitle is-3">Subtitle 3</p>
+              <p class="subtitle is-4">Subtitle 4</p>
+              <p class="subtitle is-5">Subtitle 5</p>
+              <p class="subtitle is-6">Subtitle 6</p>
+            </div>
+          </div>
+
+          <!-- Combined Title + Subtitle -->
+          <div class="mt-6">
+            <h4 class="has-text-muted text-sm mb-3">Combined</h4>
+            <h1 class="title is-3">System Dashboard</h1>
+            <p class="subtitle is-5">
+              Monitoring and analytics for your terminal
+            </p>
+          </div>
+
+          <!-- Title Colors -->
+          <div class="mt-6">
+            <h4 class="has-text-muted text-sm mb-3">Title with Colors</h4>
+            <div class="space-y-3">
+              <h3 class="title is-4 has-text-primary">Primary Title</h3>
+              <h3 class="title is-4 has-text-danger">Danger Title</h3>
+              <h3 class="title is-4 has-text-success">Success Title</h3>
+              <h3 class="title is-4 has-text-warning">Warning Title</h3>
+              <h3 class="title is-4 has-text-info">Info Title</h3>
+              <h3 class="title is-4 has-text-muted">Muted Title</h3>
+            </div>
+          </div>
+
+          <!-- Subtitle Colors -->
+          <div class="mt-6">
+            <h4 class="has-text-muted text-sm mb-3">Subtitle with Colors</h4>
+            <div class="space-y-2">
+              <p class="subtitle is-5 has-text-primary">
+                Primary description text
+              </p>
+              <p class="subtitle is-5 has-text-danger">
+                Danger description text
+              </p>
+              <p class="subtitle is-5 has-text-success">
+                Success description text
+              </p>
+              <p class="subtitle is-5 has-text-warning">
+                Warning description text
+              </p>
+              <p class="subtitle is-5 has-text-info">Info description text</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02: LISTS -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">02.</span>
+            <h2 class="text-xl font-bold">Lists</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Simple List -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Simple List</h4>
+              <ul class="list">
+                <li class="list-item">
+                  <span class="list-item-icon">▸</span>
+                  <span class="list-item-content">First item</span>
+                </li>
+                <li class="list-item is-active">
+                  <span class="list-item-icon">▸</span>
+                  <span class="list-item-content">Active item</span>
+                </li>
+                <li class="list-item">
+                  <span class="list-item-icon">▸</span>
+                  <span class="list-item-content">Third item</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- List with Details -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">List with Details</h4>
+              <ul class="list">
+                <li class="list-item">
+                  <span class="list-item-icon">📄</span>
+                  <div class="list-item-content">
+                    <div class="list-item-title">config.json</div>
+                    <div class="list-item-description">Configuration file</div>
+                  </div>
+                  <div class="list-item-meta">2.4 KB</div>
+                </li>
+                <li class="list-item is-active">
+                  <span class="list-item-icon">📁</span>
+                  <div class="list-item-content">
+                    <div class="list-item-title">src/</div>
+                    <div class="list-item-description">Source directory</div>
+                  </div>
+                  <div class="list-item-meta">12 items</div>
+                </li>
+                <li class="list-item">
+                  <span class="list-item-icon">📄</span>
+                  <div class="list-item-content">
+                    <div class="list-item-title">README.md</div>
+                    <div class="list-item-description">Documentation</div>
+                  </div>
+                  <div class="list-item-meta">4.2 KB</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Content Lists -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Unordered List</h4>
+              <ul class="content">
+                <li>First item in list</li>
+                <li>Second item with more text</li>
+                <li>Third item</li>
+                <li>Fourth item</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Ordered List</h4>
+              <ol class="content">
+                <li>First step</li>
+                <li>Second step</li>
+                <li>Third step</li>
+                <li>Final step</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 03: BUTTONS -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">03.</span>
+            <h2 class="text-xl font-bold">Buttons</h2>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Base Buttons -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Base Styles</h4>
+              <div class="flex flex-wrap gap-4 items-center">
+                <button class="button">Default</button>
+                <button class="button is-primary">Primary</button>
+                <button class="button is-danger">Danger</button>
+                <button class="button is-success">Success</button>
+                <button class="button is-warning">Warning</button>
+                <button class="button is-info">Info</button>
+              </div>
+            </div>
+
+            <!-- Disabled Button -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">States</h4>
+              <div class="flex flex-wrap gap-4 items-center">
+                <button
+                  class="button"
+                  disabled
+                  style="opacity: 0.5; cursor: not-allowed"
+                >
+                  Disabled
+                </button>
+                <button class="button is-loading">Loading</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04: TAGS -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">04.</span>
+            <h2 class="text-xl font-bold">Tags</h2>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Base Tags -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Base Styles</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="tag">Default</span>
+                <span class="tag is-primary">Primary</span>
+                <span class="tag is-danger">Danger</span>
+                <span class="tag is-success">Success</span>
+                <span class="tag is-warning">Warning</span>
+                <span class="tag is-info">Info</span>
+              </div>
+            </div>
+
+            <!-- Active Tags -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Active State</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="tag is-active">Active</span>
+                <span class="tag is-primary is-active">Primary Active</span>
+                <span class="tag is-danger is-active">Danger Active</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05: FORMS -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">05.</span>
+            <h2 class="text-xl font-bold">Forms</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+              <div class="field">
+                <label class="label">Username:</label>
+                <div class="control">
+                  <span class="has-text-primary" style="padding: 0 8px">$</span>
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Enter username..."
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password:</label>
+                <div class="control">
+                  <span class="has-text-primary" style="padding: 0 8px"
+                    >🔒</span
+                  >
+                  <input
+                    type="password"
+                    class="input"
+                    placeholder="Enter password..."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="field">
+                <label class="label">Select Option:</label>
+                <div class="control">
+                  <select class="select">
+                    <option>Default Option</option>
+                    <option>Option Alpha</option>
+                    <option>Option Beta</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Message:</label>
+                <div class="control" style="align-items: flex-start">
+                  <textarea
+                    class="textarea"
+                    rows="4"
+                    placeholder="Enter message..."
+                    style="resize: vertical"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 06: CARDS -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">06.</span>
+            <h2 class="text-xl font-bold">Cards</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Simple Card -->
+            <div class="card">
+              <div class="card-content">
+                <h4 class="card-header-title">Simple Card</h4>
+                <p class="has-text-muted text-sm">Card with content only.</p>
+              </div>
+            </div>
+
+            <!-- Card with Header -->
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-header-title">Card Header</h4>
+              </div>
+              <div class="card-content">
+                <p class="has-text-muted text-sm">
+                  Card with header and content.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card with Footer -->
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-header-title">System Status</h4>
+              </div>
+              <div class="card-content">
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="has-text-muted">CPU</span>
+                    <span class="has-text-success">12%</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="has-text-muted">Memory</span>
+                    <span class="has-text-warning">68%</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="has-text-muted">Disk</span>
+                    <span class="has-text-danger">92%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 07: TABLES -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">07.</span>
+            <h2 class="text-xl font-bold">Tables</h2>
+          </div>
+
+          <div class="card" style="padding: 0; overflow: auto">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>PID</th>
+                  <th>Process</th>
+                  <th>Status</th>
+                  <th>CPU</th>
+                  <th>Memory</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="is-selected">
+                  <td>1024</td>
+                  <td>nginx.service</td>
+                  <td class="has-text-success">RUNNING</td>
+                  <td>2.4%</td>
+                  <td>128MB</td>
+                </tr>
+                <tr>
+                  <td>2048</td>
+                  <td>postgres.service</td>
+                  <td class="has-text-success">RUNNING</td>
+                  <td>12.8%</td>
+                  <td>512MB</td>
+                </tr>
+                <tr>
+                  <td>4096</td>
+                  <td>redis.service</td>
+                  <td class="has-text-warning">IDLE</td>
+                  <td>0.1%</td>
+                  <td>64MB</td>
+                </tr>
+                <tr>
+                  <td>8192</td>
+                  <td>cron.service</td>
+                  <td class="has-text-danger">STOPPED</td>
+                  <td>0.0%</td>
+                  <td>8MB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SECTION 08: NAVIGATION -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">08.</span>
+            <h2 class="text-xl font-bold">Navigation</h2>
+          </div>
+
+          <div class="space-y-8">
+            <!-- Navbar -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Navbar</h4>
+              <nav class="navbar">
+                <div class="navbar-brand">AppName</div>
+                <ul class="navbar-menu">
+                  <li>
+                    <a href="#" class="navbar-item is-active">Dashboard</a>
+                  </li>
+                  <li><a href="#" class="navbar-item">Projects</a></li>
+                  <li><a href="#" class="navbar-item">Settings</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Tabs -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Tabs</h4>
+              <ul class="tabs">
+                <li class="is-active"><a href="#">Overview</a></li>
+                <li><a href="#">Metrics</a></li>
+                <li><a href="#">Logs</a></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+              <div class="card">
+                <div class="card-content">
+                  <p class="has-text-muted text-sm">Tab content goes here</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Breadcrumb</h4>
+              <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li class="is-active">Current Project</li>
+              </ul>
+            </div>
+
+            <!-- Dropdown -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">
+                Dropdown (hover to open)
+              </h4>
+              <div class="dropdown">
+                <button class="dropdown-trigger">Actions</button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">View Details</a>
+                    <a href="#" class="dropdown-item is-active">Edit</a>
+                    <a href="#" class="dropdown-item">Duplicate</a>
+                    <hr class="dropdown-divider" />
+                    <a href="#" class="dropdown-item has-text-danger">Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu/Sidebar -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Menu (Sidebar)</h4>
+              <div
+                class="flex"
+                style="height: 250px; border: 1px solid var(--border-color)"
+              >
+                <aside class="menu">
+                  <ul class="menu-list">
+                    <li><a href="#" class="is-active">Dashboard</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                  </ul>
+                </aside>
+                <div class="flex-1 p-4">
+                  <h3 class="text-lg font-bold has-text-primary mb-2">
+                    Main Content
+                  </h3>
+                  <p class="has-text-muted text-sm">Sidebar navigation demo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 09: PROGRESS & LOADING -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">09.</span>
+            <h2 class="text-xl font-bold">Progress & Loading</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="has-text-muted text-sm">Download Progress</span>
+                  <span class="has-text-primary text-sm font-bold">75%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="has-text-muted text-sm">CPU Usage</span>
+                  <span class="has-text-warning text-sm font-bold">88%</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    style="width: 88%; background: var(--warning)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Loading Button</h4>
+              <button class="button is-loading">Loading</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 10: TERMINAL LOG -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">10.</span>
+            <h2 class="text-xl font-bold">Terminal Log</h2>
+          </div>
+
+          <div class="terminal-log">
+            <div class="terminal-log-line">
+              <span class="terminal-log-time">12:34:01</span>
+              <span class="terminal-log-level has-text-success">[INFO]</span>
+              <span class="terminal-log-message"
+                >Server initialized successfully</span
+              >
+            </div>
+            <div class="terminal-log-line">
+              <span class="terminal-log-time">12:34:15</span>
+              <span class="terminal-log-level has-text-warning">[WARN]</span>
+              <span class="terminal-log-message"
+                >High memory usage detected: 85%</span
+              >
+            </div>
+            <div class="terminal-log-line">
+              <span class="terminal-log-time">12:34:32</span>
+              <span class="terminal-log-level has-text-danger">[ERROR]</span>
+              <span class="terminal-log-message"
+                >Connection timeout on port 8080</span
+              >
+            </div>
+            <div class="terminal-log-line has-terminal-cursor">
+              <span class="terminal-log-time">12:35:45</span>
+              <span class="terminal-log-level has-text-success">[INFO]</span>
+              <span class="terminal-log-message">Connection restored</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 11: TOAST / NOTIFICATION -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">11.</span>
+            <h2 class="text-xl font-bold">Toast / Notification</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Toast Variants</h4>
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="button is-primary"
+                  onclick="showToast('primary', 'Primary', 'This is a primary notification')"
+                >
+                  Primary Toast
+                </button>
+                <button
+                  class="button is-success"
+                  onclick="showToast('success', 'Success', 'Operation completed successfully!')"
+                >
+                  Success Toast
+                </button>
+                <button
+                  class="button is-danger"
+                  onclick="showToast('danger', 'Error', 'Something went wrong!')"
+                >
+                  Danger Toast
+                </button>
+                <button
+                  class="button is-warning"
+                  onclick="showToast('warning', 'Warning', 'Please review this action')"
+                >
+                  Warning Toast
+                </button>
+                <button
+                  class="button is-info"
+                  onclick="showToast('info', 'Info', 'Here is some information')"
+                >
+                  Info Toast
+                </button>
+              </div>
+            </div>
+
+            <!-- Toast Examples (static for demo) -->
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">Static Examples</h4>
+              <div class="space-y-4">
+                <!-- Success Toast -->
+                <div
+                  class="toast is-success"
+                  style="position: relative; top: auto; right: auto"
+                >
+                  <div class="toast-icon">✓</div>
+                  <div class="toast-content">
+                    <div class="toast-title">Success</div>
+                    <div class="toast-message">
+                      Your changes have been saved successfully.
+                    </div>
+                  </div>
+                  <button class="toast-close">×</button>
+                </div>
+
+                <!-- Danger Toast -->
+                <div
+                  class="toast is-danger"
+                  style="position: relative; top: auto; right: auto"
+                >
+                  <div class="toast-icon">✕</div>
+                  <div class="toast-content">
+                    <div class="toast-title">Error</div>
+                    <div class="toast-message">
+                      Failed to connect to server. Please try again.
+                    </div>
+                  </div>
+                  <button class="toast-close">×</button>
+                </div>
+
+                <!-- Warning Toast -->
+                <div
+                  class="toast is-warning"
+                  style="position: relative; top: auto; right: auto"
+                >
+                  <div class="toast-icon">⚠</div>
+                  <div class="toast-content">
+                    <div class="toast-title">Warning</div>
+                    <div class="toast-message">
+                      This action cannot be undone.
+                    </div>
+                  </div>
+                  <button class="toast-close">×</button>
+                </div>
+
+                <!-- Info Toast -->
+                <div
+                  class="toast is-info"
+                  style="position: relative; top: auto; right: auto"
+                >
+                  <div class="toast-icon">ℹ</div>
+                  <div class="toast-content">
+                    <div class="toast-title">Info</div>
+                    <div class="toast-message">New updates are available.</div>
+                  </div>
+                  <button class="toast-close">×</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 12: FAQ / ACCORDION -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">12.</span>
+            <h2 class="text-xl font-bold">FAQ / Accordion</h2>
+          </div>
+
+          <div class="faq">
+            <div class="faq-item is-active">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What is terminal.css?</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  terminal.css is a Terminal CSS Component Library that provides
+                  terminal-style components with Bulma naming conventions. It's
+                  designed for building retro/cyberpunk terminal-inspired
+                  interfaces.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do I use color modifiers?</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Use Bulma-style modifiers with the <code>is-*</code> pattern
+                  for components:
+                </p>
+                <p>
+                  <code
+                    >&lt;button class="button
+                    is-primary"&gt;Button&lt;/button&gt;</code
+                  >
+                </p>
+                <p>For text colors, use <code>has-text-*</code> utilities:</p>
+                <p>
+                  <code
+                    >&lt;p class="has-text-danger"&gt;Error text&lt;/p&gt;</code
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Do I need Tailwind CSS?</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  No! All components work standalone. Tailwind is optional and
+                  only recommended for layout utilities like <code>grid</code>,
+                  <code>flex</code>, and <code>gap</code>.
+                </p>
+                <p>
+                  terminal.css components have complete default styling and
+                  don't require any external dependencies.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Can I combine multiple modifiers?</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes! You can combine modifiers just like Bulma:</p>
+                <p>
+                  <code
+                    >&lt;button class="button is-primary
+                    is-loading"&gt;Submit&lt;/button&gt;</code
+                  >
+                </p>
+                <p>
+                  <code
+                    >&lt;span class="tag is-danger
+                    is-active"&gt;Error&lt;/span&gt;</code
+                  >
+                </p>
+                <p>
+                  <code
+                    >&lt;h1 class="title is-3
+                    has-text-success"&gt;Success!&lt;/h1&gt;</code
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do I customize colors?</span>
+              </div>
+              <div class="faq-answer">
+                <p>Override CSS variables in your own stylesheet:</p>
+                <p>
+                  <code>:root { --primary: #00ff00; --danger: #ff0000; }</code>
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Is this library responsive?</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! All components are designed to work on different screen
+                  sizes. Use Tailwind's responsive utilities for layout control.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="pt-12 mt-12 border-t border-gray-800 text-right">
+          <span class="has-terminal-cursor has-text-primary text-sm"
+            >System Ready. Awaiting Input...</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+  </body>
+</html>

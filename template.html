@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Terminal App</title>
+  
+  <!-- terminal.css Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/tcss@main/index.css">
+  
+  <!-- Optional: Tailwind for layout utilities -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- Terminal Container -->
+  <div class="terminal max-w-4xl mx-auto mt-8">
+    <div class="terminal-header">
+      <div class="flex gap-2">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+      </div>
+      <div class="has-text-muted text-sm">terminal@localhost</div>
+    </div>
+    
+    <div class="terminal-body">
+      <h1 class="title is-1 has-text-primary has-terminal-glow">Hello Terminal!</h1>
+      <p class="subtitle is-4">Start building your terminal-style interface</p>
+      
+      <hr class="my-6">
+      
+      <div class="space-y-4">
+        <button class="button is-primary">Primary Button</button>
+        <button class="button is-success">Success Button</button>
+        <button class="button is-danger">Danger Button</button>
+      </div>
+      
+      <hr class="my-6">
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-header-title">System Status</h4>
+        </div>
+        <div class="card-content">
+          <p class="has-text-success">All systems operational</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container (required for toast notifications) -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- terminal.css JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/tcss@main/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1201 @@
+/* ==========================================================================
+   terminal.css - Terminal CSS Component Library v3.0
+   Bulma-style naming conventions
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* 1. CSS VARIABLES */
+:root {
+  --terminal-bg: #050505;
+  --terminal-fg: #cccccc;
+
+  /* ANSI Palette */
+  --terminal-black: #000000;
+  --terminal-red: #ff5555;
+  --terminal-green: #50fa7b;
+  --terminal-yellow: #f1fa8c;
+  --terminal-blue: #bd93f9;
+  --terminal-magenta: #ff79c6;
+  --terminal-cyan: #8be9fd;
+  --terminal-white: #ffffff;
+
+  /* Semantic Colors */
+  --primary: var(--terminal-cyan);
+  --danger: var(--terminal-red);
+  --success: var(--terminal-green);
+  --warning: var(--terminal-yellow);
+  --info: var(--terminal-blue);
+  --border-color: #333333;
+  --surface: #000000;
+  --muted: #666666;
+}
+
+/* 2. BASE STYLES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--terminal-bg);
+  color: var(--terminal-fg);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: none;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--terminal-black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 16px 0;
+}
+
+/* TITLE (Bulma-style) */
+.title {
+  font-weight: bold;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.title.is-1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.title.is-2 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.title.is-3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.title.is-4 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.title.is-5 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.title.is-6 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-weight: normal;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.subtitle.is-1 {
+  font-size: 2rem;
+}
+
+.subtitle.is-2 {
+  font-size: 1.75rem;
+}
+
+.subtitle.is-3 {
+  font-size: 1.5rem;
+}
+
+.subtitle.is-4 {
+  font-size: 1.25rem;
+}
+
+.subtitle.is-5 {
+  font-size: 1rem;
+}
+
+.subtitle.is-6 {
+  font-size: 0.875rem;
+}
+
+/* LIST (Custom styles for terminal look) */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border-color);
+}
+
+.list-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 2px solid var(--primary);
+  padding-left: 14px;
+}
+
+.list-item.is-active {
+  background: rgba(139, 233, 253, 0.1);
+  border-left: 2px solid var(--primary);
+  padding-left: 14px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.list-item-icon {
+  flex-shrink: 0;
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+.list-item-content {
+  flex: 1;
+}
+
+.list-item-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.list-item-description {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.list-item-meta {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* Unordered list styles */
+ul.content {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.content li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+ul.content li::before {
+  content: "▸";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Ordered list styles */
+ol.content {
+  padding-left: 0;
+  counter-reset: item;
+  list-style: none;
+}
+
+ol.content li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 8px;
+  counter-increment: item;
+}
+
+ol.content li::before {
+  content: counter(item) ".";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* 3. LAYOUT - TERMINAL SPECIFIC */
+.terminal {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 100%;
+}
+
+.terminal-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terminal-body {
+  background: var(--terminal-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.section {
+  padding: 32px 0;
+}
+
+/* 4. BUTTONS (Bulma-style) */
+.button {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  color: var(--terminal-fg);
+  border-radius: 0;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  text-decoration: none;
+  line-height: 1.2;
+  vertical-align: middle;
+  transition: none;
+}
+
+.button:hover {
+  background: var(--border-color);
+}
+
+.button.is-primary {
+  background: var(--primary);
+  color: var(--terminal-black);
+  border-color: var(--primary);
+}
+
+.button.is-primary:hover {
+  background: var(--terminal-white);
+  border-color: var(--terminal-white);
+}
+
+.button.is-danger {
+  background: transparent;
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.button.is-danger:hover {
+  background: var(--danger);
+  color: var(--terminal-black);
+}
+
+.button.is-success {
+  background: transparent;
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.button.is-success:hover {
+  background: var(--success);
+  color: var(--terminal-black);
+}
+
+.button.is-warning {
+  background: transparent;
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.button.is-warning:hover {
+  background: var(--warning);
+  color: var(--terminal-black);
+}
+
+.button.is-info {
+  background: transparent;
+  border-color: var(--info);
+  color: var(--info);
+}
+
+.button.is-info:hover {
+  background: var(--info);
+  color: var(--terminal-black);
+}
+
+/* 5. TAGS (Bulma-style) */
+.tag {
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  border-radius: 0;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.tag.is-active,
+.tag:hover {
+  background: var(--muted);
+  color: var(--terminal-black);
+  border-color: var(--muted);
+}
+
+.tag.is-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tag.is-primary:hover,
+.tag.is-primary.is-active {
+  background: var(--primary);
+  color: var(--terminal-black);
+}
+
+.tag.is-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.tag.is-danger:hover,
+.tag.is-danger.is-active {
+  background: var(--danger);
+  color: var(--terminal-black);
+}
+
+.tag.is-success {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.tag.is-success:hover,
+.tag.is-success.is-active {
+  background: var(--success);
+  color: var(--terminal-black);
+}
+
+.tag.is-warning {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.tag.is-warning:hover,
+.tag.is-warning.is-active {
+  background: var(--warning);
+  color: var(--terminal-black);
+}
+
+.tag.is-info {
+  border-color: var(--info);
+  color: var(--info);
+}
+
+.tag.is-info:hover,
+.tag.is-info.is-active {
+  background: var(--info);
+  color: var(--terminal-black);
+}
+
+/* 6. FORMS (Bulma-style) */
+.field {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.control {
+  background: var(--terminal-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.control:focus-within {
+  border-color: var(--primary);
+}
+
+.input,
+.textarea {
+  background: transparent;
+  border: none;
+  outline: none !important;
+  color: var(--terminal-fg);
+  font-family: inherit;
+  width: 100%;
+  padding: 2px 4px;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.select {
+  background: transparent;
+  border: none;
+  outline: none !important;
+  color: var(--terminal-fg);
+  font-family: inherit;
+  width: 100%;
+  padding: 2px 4px;
+}
+
+/* 7. CARDS (Bulma-style) */
+.card {
+  background: var(--terminal-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.card:hover {
+  border-color: var(--primary);
+}
+
+.card.is-selected {
+  border: 1px double var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.card-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-header-title {
+  font-weight: bold;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card-content {
+  padding: 16px;
+  color: var(--terminal-fg);
+}
+
+.card-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* 8. TABLES (Bulma-style) */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+.table td {
+  padding: 8px;
+  border-right: 1px solid transparent;
+}
+
+.table tr:hover,
+.table tr.is-selected {
+  background-color: var(--primary);
+  color: var(--terminal-black);
+  font-weight: bold;
+}
+
+.table tr.is-selected td {
+  border-right-color: var(--terminal-black);
+}
+
+/* 9. NAVIGATION (Bulma-style) */
+.navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  color: var(--terminal-fg);
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.navbar-item:hover {
+  color: var(--primary);
+  border-color: var(--border-color);
+  text-decoration: none;
+}
+
+.navbar-item.is-active {
+  color: var(--primary);
+  border-color: var(--primary);
+  font-weight: bold;
+}
+
+/* Tabs (Bulma-style) */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  gap: 0;
+  overflow-x: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs li {
+  display: inline-block;
+}
+
+.tabs a {
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  color: var(--muted);
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  display: block;
+  text-decoration: none;
+}
+
+.tabs a:hover {
+  color: var(--terminal-fg);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tabs li.is-active a {
+  color: var(--primary);
+  border-color: var(--border-color);
+  border-bottom-color: var(--terminal-bg);
+  position: relative;
+  font-weight: bold;
+}
+
+/* Breadcrumb (Bulma-style) */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumb li a {
+  color: var(--muted);
+}
+
+.breadcrumb li a:hover {
+  color: var(--primary);
+}
+
+.breadcrumb li.is-active {
+  color: var(--terminal-fg);
+  font-weight: bold;
+}
+
+.breadcrumb li.is-active a {
+  color: var(--terminal-fg);
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  color: var(--border-color);
+  padding: 0 8px;
+}
+
+/* Dropdown (Bulma-style) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+}
+
+.dropdown-trigger .button {
+  width: 100%;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  min-width: 160px;
+  z-index: 1000;
+  margin-top: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown.is-active .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-content {
+  padding: 0;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  color: var(--terminal-fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: var(--primary);
+  color: var(--terminal-black);
+  text-decoration: none;
+}
+
+.dropdown-item.is-active {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 4px 0;
+}
+
+/* Menu/Sidebar (Bulma-style) */
+.menu {
+  background: var(--surface);
+  border-right: 1px solid var(--border-color);
+  width: 250px;
+  padding: 16px;
+}
+
+.menu-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--terminal-fg);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.menu-list a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.menu-list a.is-active {
+  background: rgba(139, 233, 253, 0.1);
+  border-left-color: var(--primary);
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* 10. PROGRESS & LOADING (Bulma-style) */
+.progress {
+  width: 100%;
+  height: 8px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress::-webkit-progress-bar {
+  background: var(--border-color);
+}
+
+.progress::-webkit-progress-value {
+  background: var(--primary);
+}
+
+.progress::-moz-progress-bar {
+  background: var(--primary);
+}
+
+.progress.is-primary::-webkit-progress-value {
+  background: var(--primary);
+}
+
+.progress.is-danger::-webkit-progress-value {
+  background: var(--danger);
+}
+
+.progress.is-success::-webkit-progress-value {
+  background: var(--success);
+}
+
+.progress.is-warning::-webkit-progress-value {
+  background: var(--warning);
+}
+
+/* Progress bar alternative (for divs) */
+.progress-bar {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.button.is-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.button.is-loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spinner-spin 1s linear infinite;
+}
+
+@keyframes spinner-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 11. TERMINAL LOG */
+.terminal-log {
+  background: var(--terminal-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  font-family: "JetBrains Mono", monospace;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.terminal-log-line,
+.log-line {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+}
+
+.terminal-log-time {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.terminal-log-level {
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.terminal-log-message {
+  color: var(--terminal-fg);
+}
+
+/* 12. UTILITIES (Bulma-style) */
+.has-text-primary {
+  color: var(--primary) !important;
+}
+
+.has-text-danger {
+  color: var(--danger) !important;
+}
+
+.has-text-success {
+  color: var(--success) !important;
+}
+
+.has-text-warning {
+  color: var(--warning) !important;
+}
+
+.has-text-info {
+  color: var(--info) !important;
+}
+
+.has-text-muted {
+  color: var(--muted) !important;
+}
+
+.has-text-white {
+  color: var(--terminal-white) !important;
+}
+
+.has-background-dark {
+  background-color: var(--surface) !important;
+}
+
+/* 13. FAQ / ACCORDION */
+.faq {
+  border: 1px solid var(--border-color);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: var(--terminal-fg);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--primary);
+}
+
+.faq-question::after {
+  content: "▼";
+  font-size: 0.75em;
+  color: var(--primary);
+  transition: transform 0.3s;
+}
+
+.faq-item.is-active .faq-question {
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-item.is-active .faq-question::after {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  color: var(--muted);
+}
+
+.faq-item.is-active .faq-answer {
+  max-height: 500px;
+  padding: 16px;
+  padding-top: 0;
+  transition: max-height 0.4s ease-in;
+}
+
+.faq-answer p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.faq-answer code {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  padding: 2px 6px;
+  font-family: inherit;
+  color: var(--primary);
+}
+
+/* 14. TOAST / NOTIFICATION */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.toast {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-left-width: 4px;
+  padding: 16px;
+  min-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: toast-slide-in 0.3s ease-out;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.toast.is-dismissing {
+  animation: toast-slide-out 0.3s ease-in forwards;
+}
+
+@keyframes toast-slide-in {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+.toast-icon {
+  font-size: 1.2em;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.toast-message {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+
+.toast-close:hover {
+  color: var(--terminal-fg);
+}
+
+/* Toast variants */
+.toast.is-primary {
+  border-left-color: var(--primary);
+}
+
+.toast.is-primary .toast-icon,
+.toast.is-primary .toast-title {
+  color: var(--primary);
+}
+
+.toast.is-danger {
+  border-left-color: var(--danger);
+}
+
+.toast.is-danger .toast-icon,
+.toast.is-danger .toast-title {
+  color: var(--danger);
+}
+
+.toast.is-success {
+  border-left-color: var(--success);
+}
+
+.toast.is-success .toast-icon,
+.toast.is-success .toast-title {
+  color: var(--success);
+}
+
+.toast.is-warning {
+  border-left-color: var(--warning);
+}
+
+.toast.is-warning .toast-icon,
+.toast.is-warning .toast-title {
+  color: var(--warning);
+}
+
+.toast.is-info {
+  border-left-color: var(--info);
+}
+
+.toast.is-info .toast-icon,
+.toast.is-info .toast-title {
+  color: var(--info);
+}
+
+/* 15. EFFECTS */
+.has-terminal-glow {
+  text-shadow: 0 0 2px var(--primary);
+}
+
+.has-terminal-cursor::after {
+  content: "▋";
+  animation: cursor-blink 1s step-end infinite;
+  color: var(--primary);
+  margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* 16. KBD ELEMENT */
+kbd {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--border-color);
+  color: var(--terminal-fg);
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation - terminal.css</title>
+
+    <!-- terminal.css Components (Bulma-style) -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Tailwind for layout (optional) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- terminal.css JavaScript -->
+    <script src="./index.js"></script>
+  </head>
+  <body class="min-h-screen p-8">
+    <!-- MAIN TERMINAL WINDOW -->
+    <div class="terminal max-w-6xl mx-auto mb-20">
+      <!-- HEADER -->
+      <div class="terminal-header">
+        <div class="flex gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="has-text-muted text-sm font-bold">
+          dev@localhost:~/tcss/installation
+        </div>
+        <div class="has-text-muted text-xs" style="opacity: 0.5">
+          v3.0.0-bulma
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="terminal-body">
+        <!-- INTRO -->
+        <div class="mb-8">
+          <h1 class="title is-1 has-terminal-glow">Installation Guide</h1>
+          <p class="subtitle is-4">
+            Get started with terminal.css in your project
+          </p>
+          <hr />
+          <div class="mt-4">
+            <a
+              href="./index.html"
+              class="has-text-primary"
+              style="text-decoration: none"
+              >← Back to Components</a
+            >
+          </div>
+        </div>
+
+        <!-- SECTION 1: INSTALLATION -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">01.</span>
+            <h2 class="text-xl font-bold">CDN Installation</h2>
+          </div>
+
+          <div class="space-y-4">
+            <p class="has-text-muted">Add these links to your HTML file:</p>
+
+            <div class="terminal-log">
+              <div class="terminal-log-line">
+                <span class="terminal-log-message has-text-muted"
+                  >&lt;!-- In your &lt;head&gt; section --&gt;</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"
+                  >&lt;link rel="stylesheet" href="[CDN_LINK_HERE]" /&gt;</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message">&nbsp;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message has-text-muted"
+                  >&lt;!-- Before closing &lt;/body&gt; tag --&gt;</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message has-text-muted"
+                  >&lt;!-- [Optional: Only for toast, FAQ component]
+                  --&gt;</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"
+                  >&lt;script src="[CDN_LINK_HERE]"&gt;&lt;/script&gt;</span
+                >
+              </div>
+            </div>
+
+            <p class="has-text-muted text-sm mt-4">
+              Optional: Add Tailwind CSS for layout utilities (flex, grid,
+              spacing)
+            </p>
+            <div class="terminal-log">
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"
+                  >&lt;script
+                  src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: HOW TO USE -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">02.</span>
+            <h2 class="text-xl font-bold">How to Use Components</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div class="card">
+              <div class="card-content">
+                <p class="has-text-muted text-sm mb-4">
+                  To use any component, simply:
+                </p>
+                <ol
+                  class="content"
+                  style="list-style: decimal; padding-left: 1.5rem"
+                >
+                  <li class="mb-2">
+                    Go to the
+                    <a href="./index.html" class="has-text-primary"
+                      >Components page</a
+                    >
+                  </li>
+                  <li class="mb-2">Find the component you want to use</li>
+                  <li class="mb-2">Press <kbd>F12</kbd> to open DevTools</li>
+                  <li class="mb-2">
+                    Inspect the component and copy the HTML code
+                  </li>
+                  <li>Paste it into your project</li>
+                </ol>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="has-text-muted text-sm mb-3">
+                Complete HTML Template
+              </h4>
+              <div class="terminal-log">
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message"
+                    >&lt;!DOCTYPE html&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message"
+                    >&lt;html lang="en"&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">&lt;head&gt;</span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;meta charset="UTF-8"&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1.0"&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;title&gt;My Terminal App&lt;/title&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message"> </span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message has-text-muted">
+                    &lt;!-- terminal.css Stylesheet --&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;link rel="stylesheet" href="[CDN_LINK_HERE]"&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message"> </span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message has-text-muted">
+                    &lt;!-- Optional: Tailwind for layout utilities --&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;script
+                    src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">&lt;/head&gt;</span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">&lt;body&gt;</span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;h1 class="title is-1 has-text-primary"&gt;Hello
+                    Terminal!&lt;/h1&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;button class="button is-primary"&gt;Click
+                    Me&lt;/button&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message"> </span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message has-text-muted">
+                    &lt;!-- terminal.css JavaScript --&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">
+                    &lt;script src="[CDN_LINK_HERE]"&gt;&lt;/script&gt;</span
+                  >
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">&lt;/body&gt;</span>
+                </div>
+                <div class="terminal-log-line">
+                  <span class="terminal-log-message">&lt;/html&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: CUSTOMIZATION -->
+        <section class="section">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="has-text-primary text-xl font-bold">03.</span>
+            <h2 class="text-xl font-bold">Customization</h2>
+          </div>
+
+          <div class="space-y-4">
+            <p class="has-text-muted">
+              Override CSS variables to customize the theme:
+            </p>
+
+            <div class="terminal-log">
+              <div class="terminal-log-line">
+                <span class="terminal-log-message has-text-muted"
+                  >/* In your custom stylesheet */</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message has-text-warning">:root</span>
+                <span class="terminal-log-message"> {</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+                <span class="terminal-log-message has-text-muted"
+                  >/* Change primary color */</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --primary: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#00ff00</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+                <span class="terminal-log-message has-text-muted"
+                  >/* Change background */</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --terminal-bg: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#0a0a0a</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+                <span class="terminal-log-message has-text-muted"
+                  >/* Change font */</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> font-family: </span>
+                <span class="terminal-log-message has-text-success"
+                  >'Courier New'</span
+                >
+                <span class="terminal-log-message">, monospace;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> </span>
+                <span class="terminal-log-message has-text-muted"
+                  >/* Other variables */</span
+                >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --terminal-fg: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#f0f0f0</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --danger: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#ff5555</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --success: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#50fa7b</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --warning: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#f1fa8c</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --info: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#8be9fd</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --border-color: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#333333</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --surface: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#1a1a1a</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message"> --muted: </span>
+                <span class="terminal-log-message has-text-success"
+                  >#6c757d</span
+                >
+                <span class="terminal-log-message">;</span>
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message">}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="pt-12 mt-12 border-t border-gray-800">
+          <div class="flex justify-between items-center">
+            <a href="./index.html" class="button is-primary"
+              >View All Components</a
+            >
+            <span class="has-terminal-cursor has-text-primary text-sm"
+              >Ready to build...</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+  </body>
+</html>
