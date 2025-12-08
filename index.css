@@ -52,7 +52,12 @@ body {
   color: var(--terminal-black);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: bold;
   line-height: 1.2;
@@ -841,7 +846,15 @@ ol.content li::before {
   background: var(--primary);
 }
 
+.progress.is-primary::-moz-progress-bar {
+  background: var(--primary);
+}
+
 .progress.is-danger::-webkit-progress-value {
+  background: var(--danger);
+}
+
+.progress.is-danger::-moz-progress-bar {
   background: var(--danger);
 }
 
@@ -849,7 +862,15 @@ ol.content li::before {
   background: var(--success);
 }
 
+.progress.is-success::-moz-progress-bar {
+  background: var(--success);
+}
+
 .progress.is-warning::-webkit-progress-value {
+  background: var(--warning);
+}
+
+.progress.is-warning::-moz-progress-bar {
   background: var(--warning);
 }
 
@@ -1175,10 +1196,12 @@ ol.content li::before {
 }
 
 @keyframes cursor-blink {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 1;
   }
-  51%, 100% {
+  51%,
+  100% {
     opacity: 0;
   }
 }
@@ -1198,4 +1221,3 @@ kbd {
   padding: 2px 6px;
   white-space: nowrap;
 }
-
