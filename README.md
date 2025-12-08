@@ -30,7 +30,7 @@ Optional: Add Tailwind CSS for layout utilities (flex, grid, spacing)
 
 To use any component, simply:
 
-1. Go to the [Components page](./index.html)
+1. Go to the [Components page](https://letieu.github.io/terminal.css/)
 2. Find the component you want to use
 3. Press <kbd>F12</kbd> to open DevTools
 4. Inspect the component and copy the HTML code
