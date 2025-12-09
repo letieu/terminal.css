@@ -1018,6 +1018,7 @@ ol.content li::before {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+  transition: padding 0.4s ease-out;
   color: var(--muted);
 }
 
