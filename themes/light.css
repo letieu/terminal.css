@@ -1,0 +1,24 @@
+:root {
+  --terminal-bg: #f5f5f5;
+  --terminal-fg: #333333;
+
+  /* ANSI Palette */
+  --terminal-black: #000000;
+  --terminal-red: #dc3545;
+  --terminal-green: #28a745;
+  --terminal-yellow: #ffc107;
+  --terminal-blue: #007bff;
+  --terminal-magenta: #e83e8c;
+  --terminal-cyan: #17a2b8;
+  --terminal-white: #ffffff;
+
+  /* Semantic Colors */
+  --primary: var(--terminal-blue);
+  --danger: var(--terminal-red);
+  --success: var(--terminal-green);
+  --warning: var(--terminal-yellow);
+  --info: var(--terminal-cyan);
+  --border-color: #dddddd;
+  --surface: #ffffff;
+  --muted: #6c757d;
+}

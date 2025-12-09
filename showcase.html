@@ -7,6 +7,7 @@
 
     <!-- terminal.css Components (Bulma-style) -->
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="themes/default.css" id="theme-switcher" />
 
     <!-- Tailwind for layout (optional) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -59,8 +60,24 @@
       <p class="subtitle is-4 mb-6">
         Terminal-style components with Bulma naming conventions
       </p>
-      <div class="flex gap-3 justify-center">
+      <div class="flex gap-3 justify-center items-center">
         <a href="./index.html" class="button is-primary">Get Started</a>
+        <div class="flex items-center gap-2">
+          <label for="theme-selector" class="has-text-muted text-xs">Theme:</label>
+          <select id="theme-selector" class="select" style="width: auto;">
+            <option value="default">Default</option>
+            <option value="dracula">Dracula</option>
+            <option value="light">Light</option>
+            <option value="gruvbox-dark">Gruvbox Dark</option>
+            <option value="gruvbox-light">Gruvbox Light</option>
+            <option value="ayu-dark">Ayu Dark</option>
+            <option value="ayu-light">Ayu Light</option>
+            <option value="rose-pine">Rosé Pine</option>
+            <option value="rose-pine-light">Rosé Pine Light</option>
+            <option value="catppuccin-mocha">Catppuccin Mocha</option>
+            <option value="catppuccin-latte">Catppuccin Latte</option>
+          </select>
+        </div>
       </div>
     </div>
 

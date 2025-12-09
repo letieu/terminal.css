@@ -69,10 +69,40 @@ function showToast(type, title, message, duration = 5000) {
  */
 function dismissToast(closeButton) {
   const toast = closeButton.closest('.toast');
-  toast.classList.add('is-dismissing');
-  
-  // Remove from DOM after animation
-  setTimeout(() => {
-    toast.remove();
-  }, 300);
+  if (toast) {
+    toast.classList.add('is-dismissing');
+    
+    // Remove from DOM after animation
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }
 }
+
+function initializeThemeSwitcher() {
+    const themeSelector = document.getElementById("theme-selector");
+    const themeSwitcher = document.getElementById("theme-switcher");
+
+    if (!themeSwitcher) {
+        return;
+    }
+
+    function applyTheme(theme) {
+      themeSwitcher.setAttribute("href", `themes/${theme}.css`);
+      localStorage.setItem("theme", theme);
+      if (themeSelector) {
+        themeSelector.value = theme;
+      }
+    }
+
+    if (themeSelector) {
+        themeSelector.addEventListener("change", () => {
+            applyTheme(themeSelector.value);
+        });
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    applyTheme(savedTheme);
+}
+
+document.addEventListener("DOMContentLoaded", initializeThemeSwitcher);
