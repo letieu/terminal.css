@@ -6,13 +6,16 @@
     <title>terminal.css - Terminal CSS Component Library</title>
 
     <!-- terminal.css Components (Bulma-style) -->
-    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.2/index.css"
+    />
 
     <!-- Tailwind for layout (optional) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- terminal.css JavaScript -->
-    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.2/index.js"></script>
   </head>
   <body class="min-h-screen p-0 md:p-8">
     <!-- MAIN TERMINAL WINDOW -->
@@ -41,9 +44,16 @@
               >Installation Guide</a
             >
             <a class="button is-info" href="./showcase.html">Showcase</a>
-            <a class="button is-ghost" href="https://github.com/letieu/terminal.css">GitHub</a>
+            <a
+              class="button is-ghost"
+              href="https://github.com/letieu/terminal.css"
+              >GitHub</a
+            >
           </div>
           <hr class="mt-6" />
+          <div class="mt-4 has-text-primary button" onclick="copyAIPrompt()">
+            Copy AI Prompt
+          </div>
         </div>
 
         <!-- SECTION 1: TYPOGRAPHY -->
@@ -862,4 +872,18 @@
     <!-- Toast Container -->
     <div class="toast-container" id="toastContainer"></div>
   </body>
+
+  <script>
+    async function copyAIPrompt() {
+      const htmlText = document.querySelector("html").innerHTML;
+      const textToCopy = htmlText;
+      await navigator.clipboard.writeText(`
+This is terminal-like css framework, this is full html example, please check and build a landing page about my SaaS product use this css framework:
+
+${htmlText}
+
+`);
+      showToast("primary", "Primary", "Copied the propmt");
+    }
+  </script>
 </html>
