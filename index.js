@@ -10,16 +10,16 @@
  */
 function toggleFaq(element) {
   const faqItem = element.parentElement;
-  const wasActive = faqItem.classList.contains('is-active');
-  
+  const wasActive = faqItem.classList.contains("is-active");
+
   // Close all FAQ items
-  document.querySelectorAll('.faq-item').forEach(item => {
-    item.classList.remove('is-active');
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    item.classList.remove("is-active");
   });
-  
+
   // Open clicked item if it wasn't active
   if (!wasActive) {
-    faqItem.classList.add('is-active');
+    faqItem.classList.add("is-active");
   }
 }
 
@@ -31,35 +31,35 @@ function toggleFaq(element) {
  * @param {number} duration - Duration in milliseconds (default: 5000)
  */
 function showToast(type, title, message, duration = 5000) {
-  const container = document.getElementById('toastContainer');
-  
+  const container = document.getElementById("toastContainer");
+
   // Create toast element
-  const toast = document.createElement('div');
+  const toast = document.createElement("div");
   toast.className = `toast is-${type}`;
-  
+
   // Icon mapping
   const icons = {
-    primary: '▸',
-    success: '✓',
-    danger: '✕',
-    warning: '⚠',
-    info: 'ℹ'
+    primary: "▸",
+    success: "✓",
+    danger: "✕",
+    warning: "⚠",
+    info: "ℹ",
   };
-  
+
   toast.innerHTML = `
-    <div class="toast-icon">${icons[type] || '▸'}</div>
+    <div class="toast-icon">${icons[type] || "▸"}</div>
     <div class="toast-content">
       <div class="toast-title">${title}</div>
       <div class="toast-message">${message}</div>
     </div>
     <button class="toast-close" onclick="dismissToast(this)">×</button>
   `;
-  
+
   container.appendChild(toast);
-  
+
   // Auto dismiss after duration
   setTimeout(() => {
-    dismissToast(toast.querySelector('.toast-close'));
+    dismissToast(toast.querySelector(".toast-close"));
   }, duration);
 }
 
@@ -68,41 +68,13 @@ function showToast(type, title, message, duration = 5000) {
  * @param {HTMLElement} closeButton - The close button element that was clicked
  */
 function dismissToast(closeButton) {
-  const toast = closeButton.closest('.toast');
+  const toast = closeButton.closest(".toast");
   if (toast) {
-    toast.classList.add('is-dismissing');
-    
+    toast.classList.add("is-dismissing");
+
     // Remove from DOM after animation
     setTimeout(() => {
       toast.remove();
     }, 300);
   }
 }
-
-function initializeThemeSwitcher() {
-    const themeSelector = document.getElementById("theme-selector");
-    const themeSwitcher = document.getElementById("theme-switcher");
-
-    if (!themeSwitcher) {
-        return;
-    }
-
-    function applyTheme(theme) {
-      themeSwitcher.setAttribute("href", `themes/${theme}.css`);
-      localStorage.setItem("theme", theme);
-      if (themeSelector) {
-        themeSelector.value = theme;
-      }
-    }
-
-    if (themeSelector) {
-        themeSelector.addEventListener("change", () => {
-            applyTheme(themeSelector.value);
-        });
-    }
-
-    const savedTheme = localStorage.getItem("theme") || "default";
-    applyTheme(savedTheme);
-}
-
-document.addEventListener("DOMContentLoaded", initializeThemeSwitcher);

@@ -29,8 +29,15 @@
           dev@localhost:~/tcss/installation
         </div>
         <div class="flex items-center gap-2">
-          <label for="theme-selector" class="has-text-muted text-xs">Theme:</label>
-          <select id="theme-selector" class="select" style="width: auto;">
+          <label for="theme-selector" class="has-text-muted text-xs"
+            >Theme:</label
+          >
+          <select
+            id="theme-selector"
+            class="select"
+            style="width: auto"
+            onchange="document.getElementById('theme-switcher').setAttribute('href', 'themes/' + this.value + '.css');"
+          >
             <option value="default">Default</option>
             <option value="dracula">Dracula</option>
             <option value="light">Light</option>
@@ -88,13 +95,20 @@
                   /&gt;</span
                 >
               </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message">&nbsp;</span>
+              <div class="terminal-log-line mt-4">
+                <span class="terminal-log-message has-text-muted"
+                  >&lt;!-- [Optional: Theme] --&gt;</span
+                >
               </div>
               <div class="terminal-log-line">
-                <span class="terminal-log-message has-text-muted"
-                  >&lt;!-- Before closing &lt;/body&gt; tag --&gt;</span
+                <span class="terminal-log-message"
+                  >&lt;link rel="stylesheet"
+                  href="https://cdn.jsdelivr.net/gh/letieu/terminal.css@v0.0.3/themes/gruvbox-dark.css"
+                  /&gt;</span
                 >
+              </div>
+              <div class="terminal-log-line">
+                <span class="terminal-log-message">&nbsp;</span>
               </div>
               <div class="terminal-log-line">
                 <span class="terminal-log-message has-text-muted"
@@ -404,97 +418,6 @@
                 <span class="terminal-log-message">}</span>
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- SECTION 4: THEMEING -->
-        <section class="section">
-          <div class="flex items-center gap-2 mb-6">
-            <span class="has-text-primary text-xl font-bold">04.</span>
-            <h2 class="text-xl font-bold">Theming</h2>
-          </div>
-
-          <div class="space-y-4">
-            <p class="has-text-muted">
-              terminal.css includes a theming system that allows you to easily switch between different color schemes. The selected theme is persisted across pages using the browser's <code>localStorage</code>.
-            </p>
-
-            <h4 class="has-text-muted text-sm mb-3">How to use themes:</h4>
-            <ol class="content">
-              <li class="mb-2">
-                Include the main <code>index.css</code> stylesheet and then a theme stylesheet in your <code>&lt;head&gt;</code> section. The theme stylesheet must have the ID <code>theme-switcher</code>.
-              </li>
-            </ol>
-
-            <div class="terminal-log">
-              <div class="terminal-log-line">
-                <span class="terminal-log-message has-text-muted"
-                  >&lt;!-- In your &lt;head&gt; section --&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&lt;link rel="stylesheet" href="./index.css" /&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&lt;link rel="stylesheet" href="themes/default.css" id="theme-switcher" /&gt;</span
-                >
-              </div>
-            </div>
-
-            <p class="has-text-muted text-sm mt-4">
-              To enable theme switching and persistence, include the <code>index.js</code> script at the end of your <code>&lt;body&gt;</code> tag. This script contains the necessary logic to manage themes.
-            </p>
-
-            <div class="terminal-log">
-              <div class="terminal-log-line">
-                <span class="terminal-log-message has-text-muted"
-                  >&lt;!-- Before closing &lt;/body&gt; tag --&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&lt;script src="./index.js"&gt;&lt;/script&gt;</span
-                >
-              </div>
-            </div>
-
-            <p class="has-text-muted text-sm mt-4">
-              You can then add a theme selector dropdown to your HTML, like this:
-            </p>
-
-            <div class="terminal-log">
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&lt;select id="theme-selector" class="select"&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&nbsp;&nbsp;&lt;option value="default"&gt;Default&lt;/option&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&nbsp;&nbsp;&lt;option value="dracula"&gt;Dracula&lt;/option&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&nbsp;&nbsp;&lt;option value="light"&gt;Light&lt;/option&gt;</span
-                >
-              </div>
-              <div class="terminal-log-line">
-                <span class="terminal-log-message"
-                  >&lt;/select&gt;</span
-                >
-              </div>
-            </div>
-            <p class="has-text-muted text-sm mt-4">
-              The <code>value</code> attribute of each option should match the filename of the theme (e.g., <code>default</code> for <code>themes/default.css</code>).
-            </p>
           </div>
         </section>
 

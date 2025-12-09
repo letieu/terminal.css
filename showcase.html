@@ -63,8 +63,15 @@
       <div class="flex gap-3 justify-center items-center">
         <a href="./index.html" class="button is-primary">Get Started</a>
         <div class="flex items-center gap-2">
-          <label for="theme-selector" class="has-text-muted text-xs">Theme:</label>
-          <select id="theme-selector" class="select" style="width: auto;">
+          <label for="theme-selector" class="has-text-muted text-xs"
+            >Theme:</label
+          >
+          <select
+            id="theme-selector"
+            class="select"
+            style="width: auto"
+            onchange="document.getElementById('theme-switcher').setAttribute('href', 'themes/' + this.value + '.css');"
+          >
             <option value="default">Default</option>
             <option value="dracula">Dracula</option>
             <option value="light">Light</option>

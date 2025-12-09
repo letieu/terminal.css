@@ -28,7 +28,12 @@
         <div class="has-text-muted text-sm font-bold">dev@localhost:~/</div>
         <div class="flex items-center gap-2">
           <label for="theme-selector" class="has-text-muted text-xs">Theme:</label>
-          <select id="theme-selector" class="select" style="width: auto;">
+          <select
+            id="theme-selector"
+            class="select"
+            style="width: auto;"
+            onchange="document.getElementById('theme-switcher').setAttribute('href', 'themes/' + this.value + '.css');"
+          >
             <option value="default">Default</option>
             <option value="dracula">Dracula</option>
             <option value="light">Light</option>
