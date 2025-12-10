@@ -7,7 +7,7 @@
 
     <!-- terminal.css Components (Bulma-style) -->
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="themes/default.css" id="theme-switcher" />
+    <link rel="stylesheet" href="themes/gruvbox-dark.css" id="theme-switcher" />
 
     <!-- Tailwind for layout (optional) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,11 +34,11 @@
             style="width: auto;"
             onchange="document.getElementById('theme-switcher').setAttribute('href', 'themes/' + this.value + '.css');"
           >
+            <option value="gruvbox-dark">Gruvbox Dark</option>
+            <option value="gruvbox-light">Gruvbox Light</option>
             <option value="default">Default</option>
             <option value="dracula">Dracula</option>
             <option value="light">Light</option>
-            <option value="gruvbox-dark">Gruvbox Dark</option>
-            <option value="gruvbox-light">Gruvbox Light</option>
             <option value="ayu-dark">Ayu Dark</option>
             <option value="ayu-light">Ayu Light</option>
             <option value="rose-pine">Rosé Pine</option>
